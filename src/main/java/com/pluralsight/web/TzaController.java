@@ -52,6 +52,7 @@ public class TzaController {
     @GetMapping("/applications")
     public ResponseEntity<List<Application>> getAllApplications() {
         List<Application> list = applicationService.listApplications();
+        System.out.println("entra a obtener todas las aplications");
         return new ResponseEntity<List<Application>>(list, HttpStatus.OK);
     }
 
